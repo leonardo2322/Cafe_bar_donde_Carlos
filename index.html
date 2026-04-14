@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Bar Donde Carlos</title>
+    <link rel="shortcut icon" href="./assets/img/delicias.jpg">
+    
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- External Libraries -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <script src="https://kit.fontawesome.com/6c466b6382.js" crossorigin="anonymous"></script>
+    
+    
+</head>
+
+<body>
+    <!-- Navigation -->
+    <header class="headers">
+        <nav class="nav">
+            <div class="nav-content">
+                <div class="nav-title">
+                    <span class="title fancy-title">Cafe Bar Donde Carlos</span>
+                    <img src="./assets/img/delicias.jpg" alt="logo_delicias_ama" id="logoPa" />
+                </div>
+                <div class="icon-content">
+                    <div>
+                        <button id="toggle-theme" class="btn" title="Cambiar modo">
+  <i class="fa-solid fa-moon"></i>
+</button>
+                    </div>
+                    <div class="icon cart" id="cart-menu">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="amount" id="cart-count"></span>
+                    </div>
+                    <div class="icon menu" id="menu">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                </div>
+            </div>
+
+            <ul class="items" id="items">
+                <li class="item"><a href="#promotion">
+                    <i class="fa-solid fa-hand-pointer" style="margin-right:6px;"></i>
+                    Promociones</a></li>
+                    
+                <li class="item"><a href="#product">
+                    <i class="fa-solid fa-hand-pointer" style="margin-right:6px;"></i>Productos</a></li>
+                <li class="item"><a href="#contact">
+                    <i class="fa-solid fa-hand-pointer" style="margin-right:6px;"></i>Contactanos</a></li>
+            </ul>
+
+            <div class="cart-items" id="cart">
+                <div class="cart-product" id="cart__container">
+                    <div class="table">
+                        <div class="table-head">
+                            <h3 class="table-head-title">Productos Seleccionados</h3>
+                        </div>
+                        <div class="tbody"></div>
+                    </div>
+                </div>
+
+    <div class="content-total-purchases">
+
+    <form id="orderForm">
+        <div class="editProductbox">
+            <div class="LABELDIV">
+                <label for="textoEdit" class="laveledit">
+                    Personaliza tu pedido (opcional):
+                </label>
+            </div>
+            <textarea
+                name="textoEdit"
+                id="textoEdit"
+                class="textarea info"
+                rows="4"
+                cols="50"
+                placeholder="Ejemplo: No bebida no arroz etc..."
+            ></textarea>
+        </div>
+
+        <section class="form-de-direccion">
+            <span>Tiempo estimado de la entrega de la orden mas o menos de 15 a 20 min </span>
+
+            <label for="direccion" class="label-direccion">Direccion</label>
+            <input type="text" class="inp-direccion" name="direccion" id="Direccion" placeholder="Coloca tu Direccion para hacer llegar tu orden" required>
+
+            <label for="Nombre" class="label-direccion">Nombre</label>
+            <input type="text" class="inp-direccion" name="Nombre" id="Nombre"  placeholder="Coloca tu Nombre 'no obligatorio'" >
+
+            <label for="Casa" class="label-direccion">Casa / Edificio / residencia</label>
+            <input type="text" class="inp-direccion" name="Casa" id="inmueble"  placeholder="Coloca tu tipo de inmueble " required>
+
+        </section>
+    </form>
+
+    <div class="total-products">
+        <span class="total">Items: <span id="itemsCart">0</span></span>
+        <span class="subTotal" id="total">$0.00</span>
+    </div>
+
+    <div class="buy-button">
+        <button class="btn" id="trash" type="button">
+            Vaciar Carrito
+            <i class="fa-solid fa-trash"></i>
+        </button>
+
+        <button class="btn btn-whatsapp" id="send" type="submit" form="orderForm">
+            Finalizar Compra
+            <i class="fa-brands fa-whatsapp"></i>
+        </button>
+    </div>
+    <div class="info-cc">
+        <img src="/assets/img/ccmedillin.png" alt="">
+        <div>
+        <span class="letra-info">al presionar boton de Finalizar Compra acepta los terminos y condiciones</span>
+<br>
+        <a href="./terminos/term.html">Terminos y condiciones</a>
+        <a href="./terminos/politicas.html">Politicas de Privacidad</a>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </nav>
+        
+        <section class="mb-5" id="nav-transparent">
+            <h3 class="titulo-nav">Categorías</h3>
+            <!-- <span class="badge rounded-pill text-bg-primary" id="button_badge" data-id="planchas_saludables">
+                Planchas Saludables
+            </span> -->
+            <span class="badge rounded-pill text-bg-primary" id="button_badge" data-id="Sencillos">
+                Sencillos
+            </span>
+            <span class="badge rounded-pill text-bg-primary" id="button_badge" data-id="porciones_menu">
+                Porciones Menú
+            </span>
+            <span class="badge rounded-pill text-bg-primary" id="button_badge" data-id="Empanadas">
+                Empanadas
+            </span>
+        </section>
+    </header>
+
+    <!-- Modal Description Product Select -->
+    <div class="container_modal">
+        <div class="modal__product-select"></div>
+    </div>
+
+    <!-- Products Section -->
+    <section>
+        <main class="products" id="product" data-aos="fade-up" data-aos-offset="200" data-aos-delay="50" data-aos-duration="600" data-aos-easing="ease-in-out">
+            <h4 class="Information">
+                Desliza para ver toda la información. Ten en cuenta que algunos productos se piden por encargo
+                <br />
+                <i class="fa-solid fa-angle-down"></i>
+            </h4>
+            <h2 class="short-title">Nuestros Productos</h2>
+            <div class="products__container" id="product-container"></div>
+            <div class="paginacion mb-5">
+                <button class="prev" id="prev">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <div class="number-page" id="number-page"></div>
+                <button class="next" id="next">
+                    <i class="fa-solid fa-angle-right"></i>
+                </button>
+            </div>
+
+            <!-- Carousel -->
+            <div class="wrapper mt-5" id="promotion" data-aos="fade-up" data-aos-offset="100" data-aos-delay="200" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                <h2 class="short-title">Promociones Especiales</h2>
+                <h5>Haz clic para seleccionar el producto</h5>
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" data-id="3">
+                            <h3>Descuento del 10%</h3>
+                            <p>Pidiendo 2 platos</p>
+                            <a href="#2">
+                                <img src="./assets/img/cerdo.webp" class="wraper_opction" alt="Promoción cerdo" />
+                            </a>
+                        </div>
+                        <div class="swiper-slide" data-id="2">
+                            <h3>Combo Especial 15% OFF</h3>
+                            <p>Un casero + una plancha por solo $2.50</p>
+                            <a href="#3">
+                                <img src="./assets/img/molida.jpg" class="wraper_opction" alt="Combo especial" />
+                            </a>
+                        </div>
+                        <div class="swiper-slide" data-id="21">
+                            <h3>Menú del Día</h3>
+                            <p>Plato completo con bebida incluida</p>
+                            <a href="#5">
+                                <img src="./assets/img/menudia.webp" class="wraper_opction other" alt="Menú del día" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </main>
+    </section>
+
+    <!-- Shortcuts -->
+    <section class="shortcuts mb-5" data-aos="fade-up" data-aos-offset="100" data-aos-delay="200" data-aos-duration="1000" data-aos-easing="ease-in-out">
+        <h3 class="short-title" id="inforGeneral">Información General</h3>
+
+        <div class="shortcuts__content">
+            <div class="shortcuts__items" data-target="modal1" title="Ubicación">
+                <img src="./assets/img/mapa.png" alt="ubicación" />
+                <span>Ubicación</span>
+            </div>
+            <div class="shortcuts__items" data-target="modal3">
+                <img src="./assets/img/calendario.png" alt="horario" />
+                <span>Horarios</span>
+            </div>
+            <div class="shortcuts__items" data-target="modal4">
+                <img src="./assets/img/descuento.png" alt="descuento" />
+                <span>Promociones</span>
+            </div>
+            <div class="shortcuts__items" data-target="modal5">
+                <img src="./assets/img/afiliado.png" alt="afiliado" />
+                <span>Afiliados</span>
+            </div>
+        </div>
+
+        <!-- Modals -->
+        <div class="modal-container" id="modal1">
+            <div class="modal">
+                <div class="modal-header">
+                    <h3>Nuestra Ubicación</h3>
+                    <span class="close-modal"><i class="fa-solid fa-xmark"></i></span>
+                </div>
+                <div class="modal-body">
+                    <div class="modal__container-img">
+                        <iframe src="https://www.google.com/maps/embed?pb=!4v1775501239960!6m8!1m7!1srk76eQJbYMoFHjgZnwXmwg!2m2!1d6.160768522005384!2d-75.58235163208528!3f197.61351137498517!4f-10.741124644232798!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <h2>Nos encontramos en Envigado, sector San Jose, sobre la Cra. 28B, a pocos pasos abajo del conjunto residencial San José.”</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-container" id="modal3">
+            <div class="modal">
+                <div class="modal-header">
+                    <h3>Nuestros Horarios</h3>
+                    <span class="close-modal"><i class="fa-solid fa-xmark"></i></span>
+                </div>
+                <div class="modal-body">
+                    <div class="modal__container-img">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Día</th>
+                                    <th>Horario</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Lunes</td><td>6:00 AM - 3:00 PM</td></tr>
+                                <tr><td>Martes</td><td>6:00 AM - 3:00 PM</td></tr>
+                                <tr><td>Miércoles</td><td>6:00 AM - 3:00 PM</td></tr>
+                                <tr><td>Jueves</td><td>6:00 AM - 3:00 PM</td></tr>
+                                <tr><td>Viernes</td><td>6:00 AM - 3:00 PM</td></tr>
+                                <tr><td>Sábado</td><td>6:00 AM - 3:00 PM</td></tr>
+                                <tr><td>Domingo</td><td><strong>6:00 AM - 3:00 PM</strong></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-container" id="modal4">
+            <div class="modal">
+                <div class="modal-header">
+                    <h3>Promociones Activas</h3>
+                    <span class="close-modal"><i class="fa-solid fa-xmark"></i></span>
+                </div>
+                <div class="modal-body">
+                    <div class="modal__container-img">
+                        <img src="./assets/img/cerdo.webp" alt="Promoción" class="img-fluid"/>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <h2>Lleva cualquier casero con un descuento del 10% pidiendo dos</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-container" id="modal5">
+            <div class="modal">
+                <div class="modal-header">
+                    <h3>Programa de Afiliados</h3>
+                    <span class="close-modal"><i class="fa-solid fa-xmark"></i></span>
+                </div>
+                <div class="modal-body">
+                    <div class="modal__container-img">
+                        <img src="./assets/img/afiliado.png" style="width: 100px; height: 100px; margin-bottom: 20px;" alt="Afiliados" />
+                        <p>
+                            Nuestros afiliados reciben promociones exclusivas, beneficios especiales, 
+                            notificaciones prioritarias y pueden realizar devoluciones. 
+                            Comunícate con nuestro asesor comercial para unirte a nosotros.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="hero mt-5" data-aos="fade-up" data-aos-offset="100" data-aos-delay="200" data-aos-duration="1000" data-aos-easing="ease-in-out">
+        <h1 class="local-information">Nuestras Instalaciones</h1>
+        <div class="container"> 
+            <img src="./assets/img/donde_carlos.webp" class="img-fluid" alt="Local Cafe Bar Donde Carlos">
+        </div>
+        <div class="hero-description">
+            <h1 class="hero__title fancy-title">Restaurante Cafe Bar Donde Carlos</h1>
+            <p class="hero__paragraph">
+                Cafe Bar Donde Carlos, donde la tradición y el sabor se encuentran en cada plato. 
+                Disfruta de nuestras especialidades preparadas con amor y los mejores ingredientes.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer mt-5" data-aos="fade-down" data-aos-offset="100" data-aos-delay="200" data-aos-duration="1000" data-aos-easing="ease-in-out">
+        <article class="contact" id="contact">
+            <h3 class="contact-title">¡Hablemos!</h3>
+            <p class="contact-description">
+                Puedes comunicarte por nuestras redes sociales, correo y más. 
+                Te prestaremos el mejor servicio y obtendrás grandes beneficios.
+            </p>
+
+            <div class="contact-redes">
+                <button>
+                    <a href="mailto:cafebardondecarlos@gmail.com" target="_blank">
+                        Email <i class="fa-solid fa-at"></i>
+                    </a>
+                </button>
+                <button>
+                    <a href="https://wa.me/+573108231770" target="_blank">
+                        WhatsApp <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </button>
+                <button>
+                    <a href="https://www.tiktok.com/@caf.bar.dnde.carl?_r=1&_t=ZS-95Jr67td7ZQ" target="_blank">
+    TikTok <i class="fa-brands fa-tiktok"></i>
+</a>
+                </button>
+            </div>
+        </article>
+
+        <span class="copy">
+            Creado por Paper Company <span id="year"></span> &copy;
+        </span>
+    </footer>
+
+    <!-- Scroll Up Button -->
+    <div class="scroll-up">
+        <i class="fa-solid fa-chevron-up"></i>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>AOS.init();</script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- ...otros scripts... -->
+<script src="./assets/js/helpers/darkmode.js"></script>
+    <script type="module" src="./assets/js/main.js"></script>
+
+    <script>
+        let year = document.getElementById("year");
+        const date = new Date().getFullYear();
+        year.innerHTML = date;
+    </script>
+</body>
+</html>
+
