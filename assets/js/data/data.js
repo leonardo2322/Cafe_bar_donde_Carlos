@@ -8,7 +8,7 @@ export const items = [
         precio: 20000,
         quantity: 150,
         detalles: "Arroz, sopa, carne,ensalada,papas, frijol, tajada y jugo ",
-        disponible: true,
+        disponible: 1,
       },
       {
         id: 2,
@@ -17,7 +17,7 @@ export const items = [
         precio: 20000,
         quantity: 150,
         detalles: "Arroz, sopa, carne,ensalada,papas, frijol, tajada y jugo ",
-        disponible: false,
+        disponible: 0,
       },
       {
         id: 3,
@@ -26,7 +26,7 @@ export const items = [
         precio: 20000,
         quantity: 150,
         detalles: "Arroz, sopa, carne,ensalada,papas, frijol, tajada y jugo ",
-        disponible: false,
+        disponible: 0,
       },
       {
         id: 4,
@@ -35,7 +35,7 @@ export const items = [
         precio: 20000,
         quantity: 150,
         detalles: "Arroz, sopa, carne,ensalada,papas, frijol, tajada y jugo ",
-        disponible: true,
+        disponible: 1,
       },
       {
         id: 5,
@@ -44,53 +44,53 @@ export const items = [
         precio: 20000,
         quantity: 150,
         detalles: "Arroz, sopa, carne,ensalada,papas, frijol, tajada y jugo ",
-        disponible: true,
-      },/*
-      {
-        id: 6,
-        titulo: "Sencillo chuleta",
-        imagen: "./assets/img/negocio/chuleta.webp",
-        precio: 21000,
-        quantity: 150,
-        detalles: "Arroz, sopa, carne,ensalada,papas,frijoles, tajada y jugo",
-        disponible: false,
+        disponible: 1,
       },
       {
-        id: 7,
-        titulo: "Pastas",
-        imagen: "./assets/img/negocio/carbonara.webp",
-        precio: 21000,
-        quantity: 150,
-        detalles: "Pastas, queso, salsa, eleccion de proteina",
-        disponible: false,
-      },
-      {
-        id: 8,
-        titulo: "Pabellon Criollo",
-        imagen: "./assets/img/negocio/pabellon.webp",
-        precio: 21000,
-        quantity: 150,
-        detalles: "Arroz, sopa, carne,ensalada,papas,frijoles, tajada y jugo",
-        disponible: false,
-      },
-      {
-        id: 9,
-        titulo: "Bandeja Chicharron",
-        imagen: "./assets/img/fchicharron.jpg",
-        precio: 21000,
-        quantity: 150,
-        detalles: "Arroz, sopa, carne,ensalada,papas,frijoles, tajada y jugo",
-        disponible: false,
-      },
-      {
-        id: 10,
         titulo: "Bandeja Pechuga",
-        imagen: "./assets/img/fpechuga.png",
-        precio: 21000,
+        imagen: "./assets/img/rojos_fr-removebg-webp.webp",
+        precio: 20000,
+        quantity: 140,
+        detalles: "Arroz, ensalada, papas fritas,tajada de maduro, jugo y sopa",
+        disponible: 1,
+        id: 6,
+      },
+      {
+        titulo: "Bandeja Chicharron",
+        imagen: "./assets/img/chicharron-removebg-webp.webp",
+        precio: 20000,
         quantity: 150,
+        detalles: "Arroz, ensalada, papas fritas,tajada de maduro, jugo y sopa",
+        disponible: 1,
+        id: 7,
+      },
+      {
+        titulo: "Pastas ",
+        imagen: "./assets/img/carbonara-removebg-webp.webp",
+        precio: 19000,
+        quantity: 200,
+        detalles: "Pasta dependiendo del tipo serian los ingredientes.",
+        disponible: 1,
+        id: 8,
+      },
+      {
+        titulo: "Sancocho de Res",
+        imagen: "./assets/img/sancocho_webp.webp",
+        precio: 22000,
+        quantity: 160,
+        detalles: "Arroz ensalada aguacate, Sopa grande aliñada con Res",
+        disponible: 1,
+        id: 9,
+      },
+      {
+        titulo: "Bandeja De Cerdo",
+        imagen: "./assets/img/cerdo-removebg-webp.webp",
+        precio: 20000,
+        quantity: 1000,
         detalles: "Arroz, sopa, carne,ensalada,papas,frijoles, tajada y jugo",
-        disponible: false,
-      },*/
+        disponible: 1,
+        id: 10,
+      },
     ],
   },
   {
@@ -103,7 +103,7 @@ export const items = [
         quantity: 1000,
         detalles:
           "Proteina a la plancha con ensalada,arepa con queso y papas + jugo natural",
-        disponible: true,
+        disponible: 1,
       },
       {
         id: 12,
@@ -113,9 +113,8 @@ export const items = [
         quantity: 1000,
         detalles:
           "Proteina a la plancha con ensalada,arepa con queso y papas + jugo natural",
-        disponible: true,
+        disponible: 1,
       },
-
       {
         id: 13,
         titulo: "Plancha con Cerdo",
@@ -124,7 +123,7 @@ export const items = [
         quantity: 1000,
         detalles:
           "Proteina a la plancha con ensalada,arepa con queso y papas + jugo natural",
-        disponible: true,
+        disponible: 1,
       },
       {
         id: 14,
@@ -134,9 +133,8 @@ export const items = [
         quantity: 8000,
         detalles:
           "Proteina a la plancha con ensalada,arepa con queso y papas + jugo natural",
-        disponible: true,
+        disponible: 1,
       },
-
       {
         id: 16,
         titulo: "Plancha con Chicharron",
@@ -145,7 +143,7 @@ export const items = [
         quantity: 1200,
         detalles:
           "Proteina a la plancha con ensalada,arepa con queso y papas + jugo natural",
-        disponible: true,
+        disponible: 1,
       },
       {
         id: 17,
@@ -155,7 +153,7 @@ export const items = [
         quantity: 1000,
         detalles:
           "Proteina a la plancha con ensalada, carbohidratos del dia + bebida",
-        disponible: true,
+        disponible: 1,
       },
       {
         id: 18,
@@ -165,7 +163,7 @@ export const items = [
         quantity: 9000,
         detalles:
           "Proteina a la plancha con ensalada, carbohidratos del dia + bebida",
-        disponible: false,
+        disponible: 0,
       },
       {
         id: 19,
@@ -175,7 +173,7 @@ export const items = [
         quantity: 1000,
         detalles:
           "Proteina a la plancha con ensalada, carbohidratos del dia + bebida",
-        disponible: true,
+        disponible: 1,
       },
       {
         id: 20,
@@ -185,7 +183,7 @@ export const items = [
         quantity: 1000,
         detalles:
           "Proteina a la plancha con ensalada, carbohidratos del dia + bebida",
-        disponible: true,
+        disponible: 1,
       },
       {
         id: 21,
@@ -195,7 +193,7 @@ export const items = [
         quantity: 1000,
         detalles:
           "Proteina a la plancha con ensalada, carbohidratos del dia + bebida",
-        disponible: true,
+        disponible: 1,
       },
     ],
   },
@@ -209,7 +207,7 @@ export const items = [
         quantity: 1000,
         detalles:
           "A diario varia Preguntar por el menu su precio tambien varia",
-        disponible: false,
+        disponible: 0,
       },
       {
         id: 22,
@@ -218,7 +216,7 @@ export const items = [
         precio: 11000,
         quantity: 1000,
         detalles: "Porcion de 120 gramos a la plancha",
-        disponible: true,
+        disponible: 1,
       },
       {
         id: 23,
@@ -227,7 +225,7 @@ export const items = [
         precio: 9000,
         quantity: 1000,
         detalles: "Porcion de 120 gramos a la plancha",
-        disponible: true,
+        disponible: 1,
       },
       {
         id: 24,
@@ -236,7 +234,7 @@ export const items = [
         precio: 8000,
         quantity: 1000,
         detalles: "Porcion de 120 gramos",
-        disponible: true,
+        disponible: 1,
       },
       {
         id: 25,
@@ -245,7 +243,7 @@ export const items = [
         precio: 9000,
         quantity: 100,
         detalles: "Porcion de 120 gramos",
-        disponible: true,
+        disponible: 1,
       },
       {
         id: 26,
@@ -254,7 +252,7 @@ export const items = [
         precio: 9000,
         quantity: 30,
         detalles: "Porcion de 120 gramos",
-        disponible: false,
+        disponible: 0,
       },
       {
         id: 27,
@@ -263,9 +261,8 @@ export const items = [
         precio: 3500,
         quantity: 100,
         detalles: "gaseosa de 600 ml",
-        disponible: true,
+        disponible: 1,
       },
-
       {
         id: 28,
         titulo: "sopa del dia",
@@ -273,7 +270,7 @@ export const items = [
         precio: 7000,
         quantity: 100,
         detalles: "sopa de 12 oz",
-        disponible: false,
+        disponible: 0,
       },
       {
         id: 29,
@@ -282,7 +279,7 @@ export const items = [
         precio: 8000,
         quantity: 100,
         detalles: "frijol de 16 oz",
-        disponible: true,
+        disponible: 1,
       },
       {
         id: 30,
@@ -291,7 +288,7 @@ export const items = [
         precio: 4000,
         quantity: 100,
         detalles: "Una taza de arroz blanco",
-        disponible: true,
+        disponible: 1,
       },
     ],
   },
@@ -303,9 +300,8 @@ export const items = [
         imagen: "./assets/img/negocio/mechada.webp",
         precio: 8000,
         quantity: 1000,
-        detalles:
-          "Harina pan de maiz rellena de carne desmechada aliñada",
-        disponible: true,
+        detalles: "Harina pan de maiz rellena de carne desmechada aliñada",
+        disponible: 1,
       },
       {
         id: 32,
@@ -314,7 +310,7 @@ export const items = [
         precio: 8000,
         quantity: 1000,
         detalles: "Harina pan de maiz rellena de pollo desmechado aliñado",
-        disponible: true,
+        disponible: 1,
       },
       {
         id: 33,
@@ -322,9 +318,8 @@ export const items = [
         imagen: "./assets/img/negocio/chichanf.webp",
         precio: 8000,
         quantity: 1000,
-        detalles:
-          "Harina pan de maiz rellena de chicharron aliñado",
-        disponible: true,
+        detalles: "Harina pan de maiz rellena de chicharron aliñado",
+        disponible: 1,
       },
       {
         id: 34,
@@ -332,9 +327,8 @@ export const items = [
         imagen: "./assets/img/negocio/jamonqueso.webp",
         precio: 8000,
         quantity: 1000,
-        detalles:
-          "Harina pan de maiz rellena de jamon y queso aliñado",
-        disponible: true,
+        detalles: "Harina pan de maiz rellena de jamon y queso aliñado",
+        disponible: 1,
       },
       {
         id: 35,
@@ -342,9 +336,8 @@ export const items = [
         imagen: "./assets/img/negocio/molidaE.webp",
         precio: 8000,
         quantity: 1000,
-        detalles:
-          "Harina pan de maiz rellena de carne molida aliñada",
-        disponible: true,
+        detalles: "Harina pan de maiz rellena de carne molida aliñada",
+        disponible: 1,
       },
     ],
   },
